@@ -1,0 +1,10 @@
+public class Main {
+    public static void main(String[] args) {
+        String[] pokemon = {"Pikachu", "Charmander", "Bulbasaur"};
+
+        System.arraycopy(pokemon, 1, pokemon, 0, pokemon.length - 1);
+        pokemon = Arrays.copyOf(pokemon, pokemon.length - 1);
+
+        System.out.println(String.join(", ", pokemon));
+    }
+}

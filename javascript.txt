@@ -1,0 +1,130 @@
+Armário: memória
+gavetas: variáveis
+etiquetas: identificadores
+
+Diferente das variáveis, as constantes são valores que não são alteráveis, como por exemplo, o valor de pi
+
+O ato de juntar uma mensagem fixa com variável se chama concatenar
+
+para concatenar utilize o +
+
+ex:("Bem vindo(a) " + variável)
+
+javascript (estrutura condicional)
+const (cria matrizes)
+let (cria uma variável)
+prompt (indica uma caixa de texto para uma variável)
+alert (exibe um texto inserido nela, podendo ser ele condicional ou não)
+if (indica um caminho caso a variável cumpra os requisitos)
+else (indica um caminho caso a variável não cumpra os requisitos)
+
+estrutura 
+<script>
+let (variável) = prompt (amumciado para a caixa de texto)
+
+if (variável verdadeira)
+{
+alert (texto que deve ser exibido)
+}
+else (variável não for verdadeira)
+{
+alert (texto que deve ser exibido)
+}
+</script>
+
+para colocar variáveis junto  textos dentro dos alerts utilize o +
+
+Ex: alert ("a soma dos números é "+resultado)
+
+
+
+estrutura de repetição 
+
+
+O laço (for) necessita de uma variável que é inserida no próprio comando
+estrutura
+f0r(valor da variável;condição para a repetição do laço; decremento ou incremeento na variável)
+
+O laço (for) geralmente é utilizado quando se sabe a quantidade de vezes necessárias para atingir a condição necessitada
+
+é possível simplificar o incremento var=var+ 1 utilizando var++
+
+é possível simplificar o decremento var=var-1 utilizando o var--
+
+
+estrutura criada utilizzando o var++
+
+<script>
+  {  for(let x=0;x<=10;x++)
+    alert(x)
+  }
+</script>
+
+
+
+estrutura criada utilizando o var--
+<script>
+  {  for(let x=50;x>=40;x--)
+    alert(x)
+  }
+</script>
+
+O laço (while) não nos dá capacidade de sabermos quando acabará de ser executado
+A inicialização da variável ocorre fora da estrutura, sendo assim, diferente do laço (for)
+
+
+O laço (do while) faz a verificação da condição no final do laço, permitindo ao menos uma execução do comando
+
+FUNÇÕES
+Quando criamos uma série de operaçõees que precisam ser repetidas em vários momentos do programa.
+
+estrutura
+
+function nome_funcao (parametros){
+	comandos
+	return valor_retomado
+}
+
+
+Matriz é um conjunto de variáveis de um mesmo tipo, sendo elas acessíveis com um único identificador, são armazenadas de forma contínua e ocupam posições de formas fixas.
+é como se fosse uma tabela onde existem varias linhas e várias colunas
+
+O vetor é formado apenas por uma linha.
+Pode-se dizer que o vetor é uma matriz unidimensional
+
+As matrizes e vetores são chamadas no js de arrays
+
+no js definimos uma array através da seguinte sintaxe:
+
+	const matriz = ["dado 1", "dado 2", "dado 3"]
+					ou
+	const matriz = [1,2,3,4,5]
+
+No js, cada posição da matriz é chamada de índice
+os índices da matriz sempre começam pelo número 0
+
+Funções de arrays
+
+array.push() (adicionar um item final array)
+array.pop() (remover item do final array)
+splice(posicao,qnts remove, itens) (adicionar em qualquer posição)
+
+
+O que é um seletor?
+É um comando utilizado no javascript para identificar um elemento DOM dentro de um documento html
+
+O que é o DOM (Document Object Model)?
+
+É o modo como são representados os elementos html dentro do navegador
+
+Os principais seletores são
+
+getElementById("")
+querySelector("")
+
+getElementsByName("")
+getElementsByClassName("")
+
+Escopo de bloco
+
+let e const são limitados ao espaço com {}, enquanto var não
