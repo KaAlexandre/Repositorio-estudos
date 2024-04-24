@@ -11,6 +11,8 @@
 
 <script>
 function calcularIMC() {
+    let validador = prompt("Você quer iniciar o programa? [S/N]");
+    while (validador === "S") {
         let peso = prompt("Digite seu peso");
         let altura = prompt("Digite sua altura (utilize o '.' para separar o metro dos centímetros)");
         const imc = peso / (altura * altura);
@@ -35,7 +37,8 @@ function calcularIMC() {
                 situacao = "Obesidade Grau III";
                 break;
             default:
-                "Opção inválida!";
+                "Opção inválida!"
+                validado==="N";
         }
 
         alert("Seu IMC é de " + imc.toFixed(1) + ", logo você se encontra no estado de " + situacao);
