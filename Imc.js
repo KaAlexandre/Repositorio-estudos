@@ -52,6 +52,9 @@ function calcularIMC() {
             case imc >= 40:
                 situacao = "Obesidade Grau III";
                 break;
+            default:
+                "Opção invalida"
+                validador==="N"
         }
 
         alert("Seu IMC é de " + imc.toFixed(1) + ", logo você se encontra no estado de " + situacao);
