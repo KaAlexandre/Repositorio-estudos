@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculadora de IMC</title>
   <style>
- 
+    /* Estilos para centralizar o botão */
     .container {
       display: flex;
       justify-content: center;
@@ -14,7 +14,7 @@
     }
 
     button {
-      padding: 20px 40px; 
+      padding: 20px 40px; /* Aumenta o tamanho do botão */
       font-size: 16px;
     }
   </style>
@@ -22,7 +22,7 @@
 <body>
 
 <div class="container">
-  <button onclick="iniciarPrograma()">Calcular IMC</button>
+  <button id="btnCalcularIMC">Calcular IMC</button>
 </div>
 
 <script>
@@ -37,7 +37,7 @@ function validarOpcao(opcao) {
 function calcularIMC() {
     let validador = prompt("Você quer iniciar o programa? [S/N]");
     if (!validarOpcao(validador)) {
-        return;
+        return; // Encerra a função se a opção for inválida
     }
     while (validador === "S") {
         let peso = prompt("Digite seu peso");
@@ -68,16 +68,17 @@ function calcularIMC() {
         alert("Seu IMC é de " + imc.toFixed(1) + ", logo você se encontra no estado de " + situacao);
         validador = prompt("Deseja continuar? [S/N]");
         if (!validarOpcao(validador)) {
-            break; 
+            break; // Sai do loop se a opção for inválida
+        }
     }
     if (validador === "N") {
         alert("Fechando o programa...");
     }
 }
 
-function iniciarPrograma() {
+document.getElementById("btnCalcularIMC").addEventListener("click", function() {
     calcularIMC();
-}
+});
 </script>
 
 </body>
