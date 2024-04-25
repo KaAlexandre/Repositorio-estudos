@@ -30,10 +30,10 @@
 
 <script>
 function validarOpcao(opcao) {
-    if (opcao !== "S" && opcao !== "N") {
-        alert("Opção inválida");
-        return false;
-    }
+    if ((opcao !== "S" && opcao !== "s") || (opcao !== "N" && opcao !== "n")) {
+    alert("Opção inválida");
+    return false;
+}
     return true;
 }
 
@@ -42,7 +42,7 @@ function calcularIMC() {
     if (!validarOpcao(validador)) {
         return; // Encerra a função se a opção for inválida
     }
-    while (validador === "S") {
+    while (validador === "S"|| validador==="s") {
         let peso = prompt("Digite seu peso");
         let altura = prompt("Digite sua altura (utilize o '.' para separar o metro dos centímetros)");
         const imc = peso / (altura * altura);
@@ -74,7 +74,7 @@ function calcularIMC() {
             break; // Sai do loop se a opção for inválida
         }
     }
-    if (validador === "N") {
+    if (validador === "N"||validador==="n") {
         alert("Fechando o programa...");
     }
 }
