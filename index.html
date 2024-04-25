@@ -12,6 +12,9 @@
 <script>
 function calcularIMC() {
     let validador = prompt("Você quer iniciar o programa? [S/N]");
+    if(validador!==="S" && validador!==="N"){
+      alert("Opção inválida")
+    }
     while (validador === "S") {
         let peso = prompt("Digite seu peso");
         let altura = prompt("Digite sua altura (utilize o '.' para separar o metro dos centímetros)");
@@ -36,16 +39,16 @@ function calcularIMC() {
             case imc >= 40:
                 situacao = "Obesidade Grau III";
                 break;
-            default:
-                "Opção inválida!"
-                validado==="N";
         }
 
         alert("Seu IMC é de " + imc.toFixed(1) + ", logo você se encontra no estado de " + situacao);
-        validador = prompt("Deseja continuar? [S/N]");
+        validador = prompt("Deseja continuar? [S/N]");    
     }
     if (validador === "N") {
         alert("Fechando o programa...");
+    }
+     if(validador!==="S" && validador!==="N"){
+      alert("Opção inválida")
     }
 }
 </script>
