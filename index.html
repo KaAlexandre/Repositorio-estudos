@@ -1,19 +1,15 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculadora de IMC</title>
-</head>
-<body>
+function validarOpcao(opcao) {
+    if (opcao !== "S" && opcao !== "N") {
+        alert("Opção inválida");
+        return false;
+    }
+    return true;
+}
 
-<button onclick="calcularIMC()">Calcular IMC</button>
-
-<script>
 function calcularIMC() {
     let validador = prompt("Você quer iniciar o programa? [S/N]");
-    if(validador!==="S" && validador!==="N"){
-      alert("Opção inválida")
+    if (!validarOpcao(validador)) {
+        return; // Encerra a função se a opção for inválida
     }
     while (validador === "S") {
         let peso = prompt("Digite seu peso");
@@ -42,16 +38,15 @@ function calcularIMC() {
         }
 
         alert("Seu IMC é de " + imc.toFixed(1) + ", logo você se encontra no estado de " + situacao);
-        validador = prompt("Deseja continuar? [S/N]");    
+        validador = prompt("Deseja continuar? [S/N]");
+        if (!validarOpcao(validador)) {
+            break; // Sai do loop se a opção for inválida
+        }
     }
     if (validador === "N") {
         alert("Fechando o programa...");
     }
-     if(validador!==="S" && validador!==="N"){
-      alert("Opção inválida")
-    }
 }
-</script>
 
-</body>
-</html>
+// Chamada da função calcularIMC
+calcularIMC();
